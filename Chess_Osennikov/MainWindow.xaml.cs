@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Chess_Osennikov.Classes;
 
 namespace Chess_Osennikov
 {
@@ -20,9 +21,14 @@ namespace Chess_Osennikov
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Pawn> Pawns = new List<Pawn>();
+        public static MainWindow mainWindow;
         public MainWindow()
         {
             InitializeComponent();
+            mainWindow = this;
         }
+
+
     }
 }
