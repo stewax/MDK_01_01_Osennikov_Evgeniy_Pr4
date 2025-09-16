@@ -28,7 +28,7 @@ namespace Chess_Osennikov.Classes
             if (SelectPawn != null)
             {
                 if (this.Black && this.Y - 1 == SelectPawn.Y && (this.X - 1 == SelectPawn.X || this.X == SelectPawn.X || this.X + 1 == SelectPawn.X) ||
-                    !this.Black && this.Y + 1 == SelectPawn.Y && (this.X - 1 == SelectPawn.X || this.X == SelectPawn.X || this.X + 1 == SelectPawn.X)
+                    !this.Black && this.Y + 1 == SelectPawn.Y && (this.X - 1 == SelectPawn.X || this.X == SelectPawn.X || this.X + 1 == SelectPawn.X))
                 {
                     MainWindow.mainWindow.gameBoard.Children.Remove(this.Figure);
                     Grid.SetColumn(SelectPawn.Figure, this.X);
@@ -43,14 +43,14 @@ namespace Chess_Osennikov.Classes
             {
                 MainWindow.mainWindow.OnSelect(this);
                 if (this.Black)
-                    this.Figure.Background = new ImageBrush(new BitmapImage(new Uri("/Images/Pawn (black).png")));
-                else this.Figure.Background = new ImageBrush(new BitmapImage(new Uri("/Images/Pawn.png")));
+                    this.Figure.Background = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\student-a502\Desktop\Chess_Osennikov\Chess_Osennikov\Images\Pawn (black).png")));
+                else this.Figure.Background = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\student-a502\Desktop\Chess_Osennikov\Chess_Osennikov\Images\Pawn.png")));
 
                 this.Select = false;
             }
             else
             {
-                this.Figure.Background = new ImageBrush(new BitmapImage(new Uri("/Images/Pawn (select).png")));
+                this.Figure.Background = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\student-a502\Desktop\Chess_Osennikov\Chess_Osennikov\Images\Pawn (select).png")));
                 this.Select = true;
             }
         }
